@@ -1,0 +1,6 @@
+# Folder node_modules (hasil install npm)
+node_modules/
+
+# File log atau cache sementara
+*.log
+.cache/
