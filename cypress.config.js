@@ -11,18 +11,21 @@ module.exports = defineConfig({
   screenshotOnRunFailure: true,
   reporter: "cypress-mochawesome-reporter", // ✅ Di sini
   reporterOptions: {
-    reportDir: 'cypress/reports',
+    charts: true,
+    reportPageTitle: "My Test Report",
+    embeddedScreenshots: true,
+    inlineAssets: true,
     overwrite: false,
-    html: false,
+    html: true,
     json: true
-  }
+  },
 
   e2e: {
      setupNodeEvents(on, config) {
        addCucumberPreprocessorPlugin(on, config);
 
       // Mochawesome Reporter register
-      // require('cypress-mochawesome-reporter/plugin')(on);
+      require('cypress-mochawesome-reporter/plugin')(on);
       on(
         "file:preprocessor",
         createBundler({
