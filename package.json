@@ -8,9 +8,17 @@
     "merge:reports": "npx mochawesome-merge cypress/reports/mochawesome/*.json > mochawesome.json",
     "generate:report": "npx marge mochawesome.json -f report -o cypress/reports/mochawesome"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ismiazis96/automation-cucumber.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ismiazis96/automation-cucumber/issues"
+  },
+  "homepage": "https://github.com/ismiazis96/automation-cucumber#readme",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
